@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "http-server": "13.1.0"
+  },
+  "name": "marry-your-favorite",
+  "description": "Marry Your Favorite Character",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "http-server -o MYFC.html",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crimsonmagick/marry-your-favorite.git"
+  },
+  "author": "incoheart",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/crimsonmagick/marry-your-favorite/issues"
+  },
+  "homepage": "https://github.com/crimsonmagick/marry-your-favorite#readme"
+}

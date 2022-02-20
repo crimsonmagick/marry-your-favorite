@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MYFC Online Generator</title>
+<style>
+
+head {
+
+}
+
+body {
+font-family: "Times New Roman";
+display:block;
+height:1000px;
+background-image: linear-gradient(rgba(255,0,0,1),rgba(124,0,0,.5) rgba(0,0,0,.5));
+}
+
+#section {
+width: 500px;
+display:block;
+margin-left: auto;
+margin-right: auto;
+background-color:#f4f4f4;
+}
+
+#certificate {
+width: 200px;
+height: 200px;
+border-style: solid;
+border-width: 4px 4px 8px 4px;
+border-color: rgba(207,13,14,1);
+text-align: center;
+font-size: 16px;
+line-height:16px;
+font-stretch:expanded;
+padding: 1px;
+margin-top:auto;
+margin-right:auto;
+margin-bottom:auto;
+margin-left:auto;
+text-shadow: 1px;
+background-image: linear-gradient(to bottom, #FDE3B0,#FDEBC5);
+outline: 1px solid black;
+visibility: hidden;
+
+
+
+}
+
+#certificate-slot {
+width: 210px;
+height: 214px;
+font-size: 16px;
+line-height:19px;
+margin-top:auto;
+box-shadow: 0px 0px 0px 1px rgba(0,0,0,.8);
+margin-right:auto;
+margin-bottom:auto;
+margin-left:auto;
+text-shadow: 1px;
+background-color:grey;
+
+
+
+
+}
+
+
+#avatar {
+display:inline-block;
+width: 80px;
+height: 80px;
+z-index:-1;
+object-fit: cover;
+position:relative;
+background-image: linear-gradient(to bottom, rgb(253, 227, 176), rgba(253,235,197,.5))
+}
+
+#avatar-frame {
+width: 80px;
+height: 80px;
+box-shadow: 0px 0px 4px 1px inset rgba(0,0,0,.5);
+margin-left: auto;
+margin-right:auto;
+position:relative;
+z-index:5;
+}
+
+#submission {
+
+margin-top:1px;
+border-top: 1px solid black;
+}
+
+#myfc {
+color:white;
+font-family:tahoma;
+font-size:7px;
+align:left;
+float:left;
+position:static;
+bottom:1px;
+right:3px;
+top:0px;
+display:inline-block;
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="section">
+<br>
+<div id="certificate-slot">
+<div id="certificate">
+<span style="font-size:16px; line-height:20px;"><b>Certificate of Marriage</b></span>
+<div id="avatar-frame">
+<img id="avatar" src="MYFC%20Online%20Generator_files/SRC.html"></div>
+This is to certify that
+<br>
+<b><span id="name">NAME </span> </b>
+<br>
+and
+<br>
+<b><span id="character">CHARACTER</span></b>
+<br>
+were married on
+<br>
+<b><span id="date">TODAY'S DATE</span></b>
+<br>
+<div id="myfc">MarryYourFavoriteCharacterOnline&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     myfconline.com</div>
+</div>
+</div>
+<br><br><br>
+
+<div id="submission">
+<br>
+<input id="yourName"> Your name
+<br>
+<input id="yourCharacter"> Character's name
+<br>
+<input id="yourAvatar"> Path or URL of character's image
+<br>
+<input id="yourDate"> Today's date <span style="color:grey; font-size:12px"> (For example, February 19, 2022)</span>
+<br>
+<br>
+<button id="replaceButton">Generate Marriage Certificate!</button>
+<button id="resetButton">Clear Certificate</button>
+</div>
+</div>
+&gt;/
+
+<script type="text/javascript">
+
+
+
+var replaceButton = document.getElementById("replaceButton");
+replaceButton.addEventListener("click",getCertificate);
+
+function getCertificate () {
+
+var Name = document.getElementById ("name");
+
+var Character = document.getElementById ("character");
+
+var Date = document.getElementById ("date")
+
+var addName = document.getElementById ("yourName").value;
+
+var addCharacter = document.getElementById ("yourCharacter").value;
+
+var addAvatar = document.getElementById ("yourAvatar").value;
+
+var addDate = document.getElementById ("yourDate").value;
+
+var Avatar = document.getElementById ("avatar").src=addAvatar;
+
+
+
+Name.innerHTML = addName;
+Character.innerHTML = addCharacter;
+Date.innerHTML = addDate;
+
+/*enable visibility of certificate*/
+document.getElementById("certificate").style.visibility = "visible";
+
+/*Reset page */
+var resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click",resetCertificate);
+
+function resetCertificate (){
+var Name = document.getElementById ("name");
+
+var Character = document.getElementById ("character");
+
+var Date = document.getElementById ("date")
+
+var addName = document.getElementById ("yourName").value="";
+
+var addCharacter = document.getElementById ("yourCharacter").value="";
+
+var addAvatar = document.getElementById ("yourAvatar").value="";
+
+var addDate = document.getElementById ("yourDate").value="";
+
+
+Name.innerHTML ="";
+Character.innerHTML ="";
+Date.innerHTML ="";
+
+/*enable visibility of certificate*/
+document.getElementById("certificate").style.visibility = "hidden";
+}
+
+
+}
+
+
+</script>
+</body></html>
