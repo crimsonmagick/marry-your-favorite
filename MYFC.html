@@ -75,7 +75,6 @@ height: 80px;
 z-index:-1;
 object-fit: cover;
 position:relative;
-background-image: linear-gradient(to bottom, rgb(253, 227, 176), rgba(253,235,197,.5))
 }
 
 #avatar-frame {
@@ -86,6 +85,17 @@ margin-left: auto;
 margin-right:auto;
 position:relative;
 z-index:5;
+}
+
+/*credit to Rillus' answer here https://stackoverflow.com/questions/21414925/why-doesnt-inset-box-shadow-work-over-images*/
+#avatar-frame::after {
+    box-shadow: inset 0px 0px 24px 0px #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 #submission {
